@@ -1,0 +1,51 @@
+card_list <-list() #create an empty list
+make_card <- function() { #create function called make_card
+#get B column
+	card_B_col <- list() #B column
+	B_col <- sample(1:15, 5) #draw 5 numbers
+    B_col <- sort(B_col) #sort smallest to largest
+    B_spot <- paste("B", B_col) #add B
+    print(B_spot) #print B column
+    card_B_col <- append(card_B_col, B_spot)
+    card_list <<- append(card_list, card_B_col)
+    
+    #get I column
+    card_I_col <- list() #I column
+	I_col <- sample(16:30, 5) #draw 5 numbers
+    I_col <- sort(I_col) #sort smallest to largest
+    I_spot <- paste("I", I_col) #add I
+    print(I_spot) #print I column
+    card_I_col <- append(card_I_col, I_spot)
+    card_list <<- append(card_list, card_I_col)
+ 
+	#get N column
+    card_N_col <- list() #N column
+	N_col <- sample(31:45, 5) #draw 5 numbers
+    N_col <- sort(N_col) #sort smallest to largest
+    N_spot <- paste("N", N_col) #add N
+    print(N_spot) #print N column
+    card_N_col <- append(card_N_col, N_spot)
+    card_list <<- append(card_list, card_N_col)
+    
+    #get G column
+    card_G_col <- list() #G column
+	G_col <- sample(46:60, 5) #draw 5 numbers
+    G_col <- sort(G_col) #sort smallest to largest
+    G_spot <- paste("G", G_col) #add G
+    print(G_spot) #print G column
+    card_G_col <- append(card_G_col, G_spot)
+    card_list <<- append(card_list, card_G_col)
+	
+    #get O column
+    card_O_col <- list() #O column
+	O_col <- sample(61:75, 5) #draw 5 numbers
+    O_col <- sort(O_col) #sort smallest to largest
+    O_spot <- paste("O", O_col) #add O
+    print(O_spot) #print O column
+    card_O_col <- append(card_O_col, O_spot)
+    card_list <<- append(card_list, card_O_col)
+
+    }
+make_card()
+cat(unlist(card_list), sep = ", ")
+    cat("\n")
