@@ -1,3 +1,4 @@
+card_matrix <-matrix() #create an empty matrix
 card_list <-list() #create an empty list
 card_B_col <- list() #B column
 card_I_col <- list() #I column
@@ -53,8 +54,8 @@ make_card <- function() { #create function called make_card
 
     }
 make_card()
-cat(unlist(card_list), sep = ", ")
-    cat("\n")
+card_matrix <-matrix(card_list, nrow=5, ncol=5) #put all the items in card list in a 5x5 matrix
+card_matrix #print card matrix
     
 #How to get BINGO
 print('Ways to Get Bingo')
