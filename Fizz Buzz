@@ -1,0 +1,13 @@
+i <- 1
+while (i < 101) { #numbers below 101
+	if (i%%15 == 0) { #multiples of 15
+    	print("Fizz Buzz")
+    } else if (i%%3 == 0) { #multiples of 3
+    	print("Fizz")
+    } else if (i%%5 == 0) { #multiples of 5
+    	print("Buzz")
+    } else {
+  print(i) #print the number
+  }
+  i <- i + 1 #increase i by 1
+}
