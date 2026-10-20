@@ -14,7 +14,7 @@ pull_ball <- function() { #create function called pull_ball
     } else { #if number is between 61 and 75, add O
     	print(paste("O", bingo_num))
     }
-    append(bingo_list, bingo_num) #add the bingo number to the bingo list
+    bingo_list <<- append(bingo_list, bingo_num) #add the bingo number to the bingo list
   }
   
 i <- 1
