@@ -2,7 +2,7 @@ bingo_list <- list() #create an empty list
 
 pull_ball <- function() { #create function called pull_ball
 	
-	bingo_num <- sample(1:75, 1) #generate a random number between 1 and 70
+	bingo_num <- sample(setdiff(1:75, unlist(bingo_list)), 1) #generate a random number between 1 and 75, checks to see if it has been pulled yet / is in bingo_list)
     if (bingo_num <=15) { #if number is less than 15, add B
     	print(paste("B", bingo_num))
     } else if (16 <= bingo_num & bingo_num <= 30) { #if number is between 16 and 30, add I
