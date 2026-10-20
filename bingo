@@ -24,4 +24,5 @@ i <- 1
   		i <- i + 1 #increase counter by 1
 	}
 
-bingo_list #print bingo list
+cat(unlist(bingo_list), sep = ", ") #print bingo list
+cat("\n")
